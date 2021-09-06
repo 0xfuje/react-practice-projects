@@ -23,20 +23,20 @@ class BudgetForm extends Component {
     }
     render() {
         return (
-            <form className='BudgetForm' onSubmit={this.handleSubmit}>
+            <form className='BudgetForm'>
                 <div className="date-container">
                     <label htmlFor="date">Date: </label>
-                    <input className='input date-input' name='date' type="text" onChange={this.handleChange}/>
+                    <input className='input date-input' name='date' type="text" required onChange={this.handleChange}/>
                 </div>
                 <div className="description-container">
                     <label htmlFor="description">Description: </label>
-                    <input className='input description-input' name='description' type="text" onChange={this.handleChange}/>
+                    <input className='input description-input' name='description' type="text" required onChange={this.handleChange}/>
                 </div>
                 <div className="change-container">
                     <label htmlFor="change">Change: </label>
-                    <input className='input change-input' name='change' type="text" onChange={this.handleChange}/>
+                    <input className='input change-input' name='change' type="text" required onChange={this.handleChange}/>
                 </div>
-                <button className='button'>Add New Transaction</button>
+                <button className='button' onClick={this.handleSubmit}>Add New Transaction</button>
             </form>
         )
     }

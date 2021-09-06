@@ -40,9 +40,10 @@ class BudgetEntry extends Component {
     }
     
     render() {
+        const numberClass = (Number(this.props.change.slice(0, -1)) > 0) ? 'positive' : 'negative';
         const editEntry = 
         <tr className='BudgetEntry-Edit'>
-            <form id='formEdit'><input type="hdden" name='id'/></form>
+            <form id='formEdit'><input type="hidden" name='id'/></form>
             <div className="left">
                 <td><input className='input' name='date' type="text" onChange={this.handleUpdate} placeholder={this.state.date}/></td>
                 <td><input className='input' name='description' type="text" onChange={this.handleUpdate} placeholder={this.state.description}/></td>
@@ -52,7 +53,6 @@ class BudgetEntry extends Component {
                 <td><i className='fas fa-check-circle' onClick={this.handleSubmit}></i></td>
                 <td><i className='fas fa-trash' onClick={this.handleRemove}></i></td>
             </div>
-           
         </tr>
         
         const entry = 
@@ -62,7 +62,7 @@ class BudgetEntry extends Component {
                 <td className='date'>{this.props.date}</td>
             </div>
             <div className="right">
-                <td className='change negative'>{this.props.change}</td>
+                <td className={`${numberClass} change`}>{this.props.change}{this.props.currency}</td>
                 <td><i className='fas fa-edit' onClick={this.handleEdit}></i></td>
                 <td><i className='fas fa-trash' onClick={this.handleRemove}></i></td>
             </div>

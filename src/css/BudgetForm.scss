@@ -10,14 +10,16 @@
         justify-content: space-between;
     }
     .button {
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
         background-color: $color-main;
         color: $color-white;
         border: 1px solid $color-lightgrey;
         border-radius: 0.25rem;
         font-size: 1rem;
         font-weight: 700;
-  
+        &:hover, &:active {
+            background-color: $color-main-darker;
+        }
     }
     .input {
         @include form;

@@ -1,4 +1,5 @@
-$color-main: #F18350;
+$color-main: hsl(19, 85%, 63%);
+$color-main-darker: hsl(19, 90%, 58%);
 $color-main-light: #F5A47F;
 $color-main-lightest: #F5E6E0;
 
@@ -13,7 +14,7 @@ $color-light: #F3EFEE;
 
 $big-box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.1);
 
-.fas { cursor: pointer };
+.fas { cursor: pointer; };
 .negative { color: $color-negative };
 .positive { color: $color-positive };
 
