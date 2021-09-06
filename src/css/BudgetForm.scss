@@ -1,0 +1,26 @@
+@import './utils.scss';
+
+.BudgetForm {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    * {
+        display: flex;
+        justify-content: space-between;
+    }
+    .button {
+        padding: 0.5rem;
+        background-color: $color-main;
+        color: $color-white;
+        border: 1px solid $color-lightgrey;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+        font-weight: 700;
+  
+    }
+    .input {
+        @include form;
+    }
+    
+}

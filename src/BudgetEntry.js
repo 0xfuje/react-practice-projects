@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './css/BudgetEntry.scss';
 
 class BudgetEntry extends Component {
     constructor(props) {
@@ -41,21 +42,31 @@ class BudgetEntry extends Component {
     render() {
         const editEntry = 
         <tr className='BudgetEntry-Edit'>
-            <form id='formEdit' ><input type="hdden" name='id'/></form>
-            <td><input name='date' type="text" onChange={this.handleUpdate} placeholder={this.state.date}/></td>
-            <td><input name='description' type="text" onChange={this.handleUpdate} placeholder={this.state.description}/></td>
-            <td><input name='change' type="text" onChange={this.handleUpdate} placeholder={this.state.change}/></td>
-            <td><button onClick={this.handleSubmit}>Done</button></td>
-            <td><button onClick={this.handleRemove}>X</button></td>
+            <form id='formEdit'><input type="hdden" name='id'/></form>
+            <div className="left">
+                <td><input className='input' name='date' type="text" onChange={this.handleUpdate} placeholder={this.state.date}/></td>
+                <td><input className='input' name='description' type="text" onChange={this.handleUpdate} placeholder={this.state.description}/></td>
+            </div>
+            <div className="right">
+                <td><input className='input' name='change' type="text" onChange={this.handleUpdate} placeholder={this.state.change}/></td>
+                <td><i className='fas fa-check-circle' onClick={this.handleSubmit}></i></td>
+                <td><i className='fas fa-trash' onClick={this.handleRemove}></i></td>
+            </div>
+           
         </tr>
         
         const entry = 
         <tr className='BudgetEntry'>
-            <td>{this.props.date}</td>
-            <td>{this.props.description}</td>
-            <td>{this.props.change}</td>
-            <td><button onClick={this.handleEdit}>Edit</button></td>
-            <td><button onClick={this.handleRemove}>X</button></td>
+            <div className='left'>
+                <td className='description'>{this.props.description}</td>
+                <td className='date'>{this.props.date}</td>
+            </div>
+            <div className="right">
+                <td className='change negative'>{this.props.change}</td>
+                <td><i className='fas fa-edit' onClick={this.handleEdit}></i></td>
+                <td><i className='fas fa-trash' onClick={this.handleRemove}></i></td>
+            </div>
+           
         </tr>
         return (
             (this.state.isEditing === false) ? entry : editEntry

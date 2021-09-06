@@ -1,0 +1,29 @@
+@import './utils.scss';
+
+.BudgetEntry {
+    width: 400px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    .left {
+        display: flex;
+        flex-direction: column;
+    }
+    .description {
+        text-transform: capitalize;
+        font-size: 1.125rem;
+    }
+    .date {
+        font-size: 0.625rem;
+        color: $color-grey;
+    }
+    .change {
+        font-weight: 500;
+    }
+}
+
+.BudgetEntry-Edit {
+    .input {
+        @include form;
+    }
+}

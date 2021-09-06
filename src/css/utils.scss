@@ -1,0 +1,28 @@
+$color-main: #F18350;
+$color-main-light: #F5A47F;
+$color-main-lightest: #F5E6E0;
+
+$color-positive: #2ECC71;
+$color-negative: #E74C3C;
+
+$color-dark: #3F3934;
+$color-grey: #897C76;
+$color-lightgrey: #C4C4C4;
+$color-white: #fff;
+$color-light: #F3EFEE;
+
+$big-box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.1);
+
+.fas { cursor: pointer };
+.negative { color: $color-negative };
+.positive { color: $color-positive };
+
+@mixin form {
+    padding: 0.25rem;
+    background-color: $color-light;
+    border: 1px solid $color-lightgrey;
+    border-radius: 0.25rem;
+    &:focus, &:focus-visible, &:active, &:hover {
+        border: 1px solid $color-grey;
+    }
+}

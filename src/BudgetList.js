@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BudgetEntry from './BudgetEntry';
 import BudgetForm from './BudgetForm';
 import { id } from './helper';
+import './css/BudgetList.scss';
 
 class BudgetList extends Component {
     constructor(props) {
@@ -52,14 +53,16 @@ class BudgetList extends Component {
         })
         return (
             <div className="BudgetList">
+                <h1 className='main-title'>Pocket Saver 2000</h1>
                 <BudgetForm add={this.add} />
+                <h2 className='secondary-title'>Last transactions</h2>
                 <table className='BudgetTable'>
                     <thead>
-                        <tr>
+                        {/* <tr>
                             <td>Date</td>
                             <td>Description</td>
                             <td>Income / Expense</td>
-                        </tr>
+                        </tr> */}
                     </thead>
                     <tbody>
                     {budgetList}

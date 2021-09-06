@@ -1,0 +1,20 @@
+@import './utils.scss';
+
+.BudgetList {
+    width: 25rem;
+    margin: auto;
+    padding: 6rem 3rem 3rem 3rem;
+    background-color: $color-white;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: $big-box-shadow;
+
+    .secondary-title {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.BudgetTable {
+    
+    overflow: hidden;
+}
